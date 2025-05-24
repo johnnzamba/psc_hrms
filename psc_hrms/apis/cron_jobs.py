@@ -9,8 +9,8 @@ def set_leave_days():
     """Called monthly via scheduler_events. On the last day of each month,
     allocate one-twelfth of each leave policy's annual allocation to all
     active assignments for the next month."""
-    # today = getdate(nowdate())
-    today = getdate("31-05-2025")
+    today = getdate(nowdate())
+    # today = getdate("31-05-2025")
     # only run on last day of month
     last_day = calendar.monthrange(today.year, today.month)[1]
     if today.day != last_day:

@@ -14,7 +14,7 @@ after_install = "psc_hrms.apis.helpers.after_install" #Disabled for Automated Al
 # ---------------
 
 scheduler_events = {
-	"monthly": [
+	"daily": [
 		"psc_hrms.apis.cron_jobs.set_leave_days"
 	],
     # "daily": [
