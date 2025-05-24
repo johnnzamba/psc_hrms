@@ -7,8 +7,64 @@ app_license = "mit"
 
 # Apps
 # ------------------
+after_install = "psc_hrms.apis.helpers.after_install" #Disabled for Automated Allocation
 
+
+# Scheduled Tasks
+# ---------------
+
+scheduler_events = {
+	"monthly": [
+		"psc_hrms.apis.cron_jobs.set_leave_days"
+	],
+    # "daily": [
+    #     "psc_hrms.apis.cron_jobs.expire_leave_allocation"
+    # ]
+}
+fixtures = [
+    {
+        "doctype": "DocType",
+        "filters": [
+            [
+                "name", "in", [
+                    "Leave Policy Assignment",
+                    "Leave Policy Detail",
+                    "Leave Policy",
+                    "Leave Allocation",
+                    "Leave Application"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Workflow State"
+    },
+    {
+        "doctype": "Workflow Action Master"
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [["name", "in", ["Set Effective Dates"]]]
+    },
+    {
+        "doctype": "Workflow",
+        "filters": [["name", "in", ["Leave Application"]]]
+    },
+    {
+        "doctype": "Role",
+        "filters": [["name", "in", ["HR Manager", "HR User"]]]
+    }
+]
 # required_apps = []
+
+# Hooks
+
+doc_events = {
+	"Leave Application": {
+		"on_change": "psc_hrms.apis.helpers.dispatch_mails",
+        "on_submit": "psc_hrms.apis.helpers.dispatch_mails"
+	}
+}
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -83,7 +139,6 @@ app_license = "mit"
 # ------------
 
 # before_install = "psc_hrms.install.before_install"
-# after_install = "psc_hrms.install.after_install"
 
 # Uninstallation
 # ------------
@@ -143,27 +198,6 @@ app_license = "mit"
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 # 	}
-# }
-
-# Scheduled Tasks
-# ---------------
-
-# scheduler_events = {
-# 	"all": [
-# 		"psc_hrms.tasks.all"
-# 	],
-# 	"daily": [
-# 		"psc_hrms.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"psc_hrms.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"psc_hrms.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"psc_hrms.tasks.monthly"
-# 	],
 # }
 
 # Testing

@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Leave Policy Assignment",
+  "enabled": 1,
+  "modified": "2025-05-24 10:27:06.379518",
+  "module": "Psc Hrms",
+  "name": "Set Effective Dates",
+  "script": "frappe.ui.form.on('Leave Policy Assignment', {\n    refresh: function(frm) {\n        if (frm.doc.assignment_based_on === \"Current Fiscal Year\") {\n            const currentYear = new Date().getFullYear();\n            const startOfYear = `${currentYear}-01-01`;\n            const endOfYear = `${currentYear}-12-31`;\n\n            frm.set_value(\"effective_from\", startOfYear);\n            frm.set_value(\"effective_to\", endOfYear);\n        }\n    }\n});\n",
+  "view": "Form"
+ }
+]
