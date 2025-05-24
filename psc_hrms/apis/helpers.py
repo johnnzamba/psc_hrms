@@ -99,7 +99,10 @@ def dispatch_mails(doc=None, method=None, doc_name=None):
             # Fetch all users with role "HR Manager"
             hr_managers = frappe.get_all(
                 "User",
-                filters={"role": "HR Manager"},
+                filters={
+                    "role": "HR Manager",
+                    "enabled": 1
+                },
                 fields=["email"]
             )
             recipients = [user.email for user in hr_managers if user.email]
