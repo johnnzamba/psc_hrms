@@ -44,7 +44,7 @@ fixtures = [
     },
     {
         "doctype": "Client Script",
-        "filters": [["name", "in", ["Set Effective Dates"]]]
+        "filters": [["name", "in", ["Set Effective Dates", "Leave Allocation Inner Button", "Leave Allocation for Staff"]]]
     },
     {
         "doctype": "Workflow",

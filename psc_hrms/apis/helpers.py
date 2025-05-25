@@ -132,3 +132,43 @@ def dispatch_mails(doc=None, method=None, doc_name=None):
     # Send employee notification for Approved state
     if doc.workflow_state == "Approved":
         send_employee_notification(doc)
+
+
+import frappe
+from frappe.utils import today, getdate, flt
+
+@frappe.whitelist()
+def allocate_leave_days(employee, leave_type, leave_days, current_fiscal_year=0, additional_description=''):
+    """
+    Allocates leave days for an employee by creating and submitting a Leave Allocation document.
+    """
+    # Fetch employee details
+    emp = frappe.get_doc('Employee', employee)
+    # Determine dates
+    from_date = today()
+    if int(current_fiscal_year):
+        year = getdate(from_date).year
+        to_date = f"{year}-12-31"
+    else:
+        # If not current fiscal year, use today's date
+        to_date = from_date
+
+    # Build Leave Allocation doc
+    alloc = frappe.new_doc('Leave Allocation')
+    alloc.employee = emp.name
+    alloc.employee_name = emp.employee_name
+    alloc.department = emp.department
+    alloc.company = emp.company
+    alloc.leave_type = leave_type
+    alloc.from_date = from_date
+    alloc.to_date = to_date
+    alloc.new_leaves_allocated = flt(leave_days)
+    alloc.carry_forward = 1
+    alloc.description = additional_description
+
+    # Insert, save and submit
+    alloc.insert(ignore_permissions=True)
+    alloc.submit()
+
+    # Return the new document name
+    return alloc.name
