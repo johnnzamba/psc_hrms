@@ -44,7 +44,7 @@ fixtures = [
     },
     {
         "doctype": "Client Script",
-        "filters": [["name", "in", ["Set Effective Dates", "Leave Allocation Inner Button", "Leave Allocation for Staff"]]]
+        "filters": [["name", "in", ["Set Effective Dates", "Leave Allocation Inner Button", "Leave Allocation for Staff", "Filter By dept"]]]
     },
     {
         "doctype": "Workflow",
@@ -53,6 +53,10 @@ fixtures = [
     {
         "doctype": "Role",
         "filters": [["name", "in", ["HR Manager", "HR User"]]]
+    },
+    {
+        "doctype": "Email Template",
+        "filters": [["name", "in", ["Informative Notice for Leave", "Leave Status Notification", "Leave Approval Template"]]]
     }
 ]
 # required_apps = []
@@ -62,7 +66,10 @@ fixtures = [
 doc_events = {
 	"Leave Application": {
 		"on_change": "psc_hrms.apis.helpers.dispatch_mails",
-        "on_submit": "psc_hrms.apis.helpers.dispatch_mails"
+        "on_submit": [
+            "psc_hrms.apis.helpers.dispatch_mails",
+            "psc_hrms.apis.helpers.dispatch_notices"
+        ]
 	}
 }
 

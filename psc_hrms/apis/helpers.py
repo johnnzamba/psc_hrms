@@ -190,3 +190,65 @@ def user_can_allocate_leave():
         user
     )
     return bool(approver_depts)
+
+import frappe
+
+@frappe.whitelist()
+def dispatch_notices(doc=None, method=None, doc_name=None):
+    """
+    On submit of Leave Application, notify the stand-in employee via
+    the 'Informative Notice for Leave' Email Template.
+
+    Allows manual testing by passing `doc_name`.
+    """
+    # If called with doc_name for testing, load that document
+    if doc_name:
+        doc = frappe.get_doc("Leave Application", doc_name)
+
+    # 1) Grab the stand-in Employee link
+    stand_in = doc.custom_who_is_to_stand_in_place_while_absent
+    if not stand_in:
+        frappe.logger().debug(f"No stand-in defined for {doc.name}")
+        return
+
+    # 2) Fetch Employee record for email
+    emp = frappe.get_doc("Employee", stand_in)
+    recipient = emp.personal_email or emp.company_email
+    if not recipient:
+        frappe.log_error(
+            message=f"Employee {emp.name} has no email address",
+            title="Dispatch Notices"
+        )
+        return
+
+    # 3) Load the Email Template
+    try:
+        tmpl = frappe.get_doc("Email Template", "Informative Notice for Leave")
+    except frappe.DoesNotExistError:
+        frappe.log_error(
+            message="Email Template 'Informative Notice for Leave' not found",
+            title="Dispatch Notices"
+        )
+        return
+
+    # 4) Render with context
+    context = doc.as_dict()
+    subject = frappe.render_template(tmpl.subject, context)
+    body = frappe.render_template(tmpl.response, context)
+
+    # 5) Send the email
+    try:
+        frappe.sendmail(
+            recipients=[recipient],
+            subject=subject,
+            message=body,
+            reference_doctype=doc.doctype,
+            reference_name=doc.name,
+            # now=True
+        )
+        frappe.logger().info(f"Dispatched notice to {recipient} for {doc.name}")
+    except Exception as e:
+        frappe.log_error(
+            message=f"Failed to send dispatch notice to {recipient} for {doc.name}: {e}",
+            title="Dispatch Notices"
+        )
