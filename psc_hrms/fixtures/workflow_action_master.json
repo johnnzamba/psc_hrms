@@ -79,6 +79,27 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2025-05-29 12:12:52.886330",
+  "name": "Submit to Supervisor",
+  "workflow_action_name": "Submit to Supervisor"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-05-29 12:14:19.282235",
+  "name": "Submit to HOD",
+  "workflow_action_name": "Submit to HOD"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-05-29 12:16:44.944139",
+  "name": "Submit to HR",
+  "workflow_action_name": "Submit to HR"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
   "modified": "2025-03-13 09:18:44.476000",
   "name": "Revoke",
   "workflow_action_name": "Revoke"

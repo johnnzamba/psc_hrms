@@ -15,6 +15,18 @@
   "docstatus": 0,
   "doctype": "Email Template",
   "enabled": 1,
+  "modified": "2025-05-30 07:15:43.989208",
+  "name": "Claim Form Informative Notices",
+  "reference_doctype": "Public Holiday and Off Days Claim Form",
+  "response": "<div class=\"ql-editor read-mode\"><h3>Hello,</h3><h3>This is an Informative Message for <strong>{{ staff_name }}</strong> &nbsp;| Public Holiday and Off Days Claim Form.</h3><h3>The&nbsp;Details are as follows:</h3><h3><br></h3><h3>Name of Staff : {{ staff_name }}</h3><h3>Name of Department: {{ department }}</h3><h3>Eligible Days: {{ eligible_days }}</h3><h3><br></h3><p><br></p><p>{% set doc_link = frappe.utils.get_url_to_form('Public Holiday and Off Days Claim Form', name) %}</p><p><br></p><h3><strong><a href=\"{{ doc_link }}\" rel=\"noopener noreferrer\">{{ _('Follow Up Here') }}</a></strong></h3></div>",
+  "response_html": null,
+  "subject": "Public Holiday and Off Days Claim Form - {{for_staff}}",
+  "use_html": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Template",
+  "enabled": 1,
   "modified": "2025-05-24 18:47:37.733927",
   "name": "Leave Status Notification",
   "reference_doctype": "Leave Application",

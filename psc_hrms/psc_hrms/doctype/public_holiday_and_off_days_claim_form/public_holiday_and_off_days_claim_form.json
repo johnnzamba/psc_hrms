@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-29 10:27:51.989204",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_33gg",
+  "amended_from",
+  "department",
+  "for_staff",
+  "staff_name",
+  "created_by",
+  "column_break_izqs",
+  "from_date",
+  "to_date",
+  "approved_on",
+  "leave_allocation",
+  "section_break_zsll",
+  "table_bxck",
+  "eligible_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_33gg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Public Holiday and Off Days Claim Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "bold": 1,
+   "description": "NOTE: ALL Claims ARE Department-wise",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "For Department?",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "description": "AUTOPOPULATES based on User in Session.",
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Form Created By?",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_izqs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Claim Done FROM?",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.from_date",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "Claim Done TO?"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "description": "NOTE: This indicates when the FINAL Approval was Done.",
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Final Approval Done On",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.from_date",
+   "description": "PLEASE NOTE: DATES WILL FILTER BASED ON FROM/TO DATE SET EARLIER",
+   "fieldname": "section_break_zsll",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_bxck",
+   "fieldtype": "Table",
+   "options": "Claim Form Reference"
+  },
+  {
+   "bold": 1,
+   "description": "NOTE: Will Dynamically change based on the TABLE above.",
+   "fieldname": "eligible_days",
+   "fieldtype": "Data",
+   "label": "Number of Days Eligible for Claim",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.department",
+   "description": "NOTE: Staff will be Filtered based on Department.",
+   "fieldname": "for_staff",
+   "fieldtype": "Link",
+   "label": "Claim Raised for Staff?",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.for_staff",
+   "fieldname": "staff_name",
+   "fieldtype": "Data",
+   "label": "Staff Name",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "description": "NOTE: This means Allocation was made from Claim made.",
+   "fieldname": "leave_allocation",
+   "fieldtype": "Link",
+   "label": "Leave Allocation (For Reference)",
+   "options": "Leave Allocation",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-30 08:17:49.413154",
+ "modified_by": "Administrator",
+ "module": "Psc Hrms",
+ "name": "Public Holiday and Off Days Claim Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

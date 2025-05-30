@@ -165,6 +165,33 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2025-05-29 12:10:56.090183",
+  "name": "Approved by Supervisor",
+  "style": "Success",
+  "workflow_state_name": "Approved by Supervisor"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-05-29 12:11:18.452693",
+  "name": "Approved by HOD",
+  "style": "Success",
+  "workflow_state_name": "Approved by HOD"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-05-29 12:11:55.909170",
+  "name": "Approved by HRM",
+  "style": "Success",
+  "workflow_state_name": "Approved by HRM"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2025-03-13 09:14:50.720251",
   "name": "Pending Student",
   "style": "",

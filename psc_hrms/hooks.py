@@ -48,7 +48,7 @@ fixtures = [
     },
     {
         "doctype": "Workflow",
-        "filters": [["name", "in", ["Leave Application"]]]
+        "filters": [["name", "in", ["Leave Application", "Claim Form Workflow"]]]
     },
     {
         "doctype": "Role",
@@ -56,7 +56,7 @@ fixtures = [
     },
     {
         "doctype": "Email Template",
-        "filters": [["name", "in", ["Informative Notice for Leave", "Leave Status Notification", "Leave Approval Template"]]]
+        "filters": [["name", "in", ["Informative Notice for Leave", "Leave Status Notification", "Leave Approval Template", "Claim Form Informative Notices"]]]
     }
 ]
 # required_apps = []
@@ -70,7 +70,11 @@ doc_events = {
             "psc_hrms.apis.helpers.dispatch_mails",
             "psc_hrms.apis.helpers.dispatch_notices"
         ]
-	}
+	},
+    "Public Holiday and Off Days Claim Form": {
+        "on_submit": "psc_hrms.psc_hrms.doctype.public_holiday_and_off_days_claim_form.public_holiday_and_off_days_claim_form.notify_supervisor",
+        "on_update_after_submit": "psc_hrms.psc_hrms.doctype.public_holiday_and_off_days_claim_form.public_holiday_and_off_days_claim_form.notify_users"
+    }
 }
 
 # Each item in the list will be shown as an app in the apps page

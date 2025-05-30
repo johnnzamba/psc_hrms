@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-29 11:05:05.394835",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "staff_name",
+  "worked_on",
+  "reason",
+  "additional_info"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "staff_name",
+   "fieldtype": "Data",
+   "label": "Name of Staff",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "worked_on",
+   "fieldtype": "Date",
+   "label": "Public Holiday or Off Day Worked",
+   "placeholder": "Choose a Date"
+  },
+  {
+   "bold": 1,
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason for Working on Off Day",
+   "placeholder": "EXAMPLE: Mandatory Shift"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Data",
+   "label": "Any Additional Comments/Signature",
+   "placeholder": "OPTIONAL"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-29 12:00:56.765311",
+ "modified_by": "Administrator",
+ "module": "Psc Hrms",
+ "name": "Claim Form Reference",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
