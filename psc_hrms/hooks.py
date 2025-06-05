@@ -31,7 +31,8 @@ fixtures = [
                     "Leave Policy Detail",
                     "Leave Policy",
                     "Leave Allocation",
-                    "Leave Application"
+                    "Leave Application",
+                    "Attendance"
                 ]
             ]
         ]

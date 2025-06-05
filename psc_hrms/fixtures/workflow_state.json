@@ -165,6 +165,15 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2025-03-13 09:14:50.720251",
+  "name": "Pending Student",
+  "style": "",
+  "workflow_state_name": "Pending Student"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2025-05-29 12:10:56.090183",
   "name": "Approved by Supervisor",
   "style": "Success",
@@ -187,15 +196,6 @@
   "name": "Approved by HRM",
   "style": "Success",
   "workflow_state_name": "Approved by HRM"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2025-03-13 09:14:50.720251",
-  "name": "Pending Student",
-  "style": "",
-  "workflow_state_name": "Pending Student"
  },
  {
   "docstatus": 0,
@@ -236,20 +236,20 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2024-12-19 06:49:55.319469",
-  "name": "Draft",
-  "style": "Warning",
-  "workflow_state_name": "Draft"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
   "icon": "ok-sign",
   "modified": "2024-03-29 16:28:10.785142",
   "name": "Approved",
   "style": "Success",
   "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-12-19 06:49:55.319469",
+  "name": "Draft",
+  "style": "Warning",
+  "workflow_state_name": "Draft"
  },
  {
   "docstatus": 0,
