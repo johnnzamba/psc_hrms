@@ -2,7 +2,7 @@ import frappe
 from frappe import _
 from datetime import datetime
 
-@frappe.whitelist(allow_guest=True)
+@frappe.whitelist(allow_guest=False)
 def get_staff():
     try:
         employees = frappe.get_all("Employee", fields=[
@@ -13,7 +13,7 @@ def get_staff():
         frappe.log_error(_("Staff Fetch Error"), e)
         return {"error": str(e)}
 
-@frappe.whitelist(allow_guest=True)
+@frappe.whitelist(allow_guest=False)
 def createAttendanceAndCheckins(data):
     try:
         data = frappe.parse_json(data)
@@ -21,19 +21,31 @@ def createAttendanceAndCheckins(data):
         formatted_time = event_dt.strftime("%d-%m-%Y %H:%M:%S")
         attendance_date = event_dt.date()
         entry_type = "IN" if data.get("entry_exit_type") == "0" else "OUT"
-        employee_number = data.get("user_id")
 
-        # Fetch employee details
-        employee = frappe.get_value("Employee", 
-            {"employee_number": employee_number}, 
-            ["name", "employee_name", "company", "department"], as_dict=True
+        # 1. Grab raw input (e.g. "PSC-00028")
+        raw_emp_number = data.get("user_id")
+        if not raw_emp_number:
+            return {"error": "No user_id provided"}
+        
+        # 2. Remove any hyphens → "PSC00028"
+        clean_emp_number = raw_emp_number.replace("-", "")
+        prefix = clean_emp_number[:3]
+        suffix = clean_emp_number[3:]
+        formatted_emp_number = f"{prefix}-{suffix}"
+
+        # 4. Fetch employee details using the reformatted number:
+        employee = frappe.get_value(
+            "Employee",
+            {"employee_number": formatted_emp_number},
+            ["name", "employee_name", "company", "department"],
+            as_dict=True
         )
         if not employee:
-            return {"error": f"Employee {employee_number} not found"}
+            return {"error": f"Employee {formatted_emp_number} not found"}
 
-        # Attendance handling
+        # 5. Check if Attendance already exists for that date:
         attendance = frappe.db.exists("Attendance", {
-            "employee": employee.name, 
+            "employee": employee.name,
             "attendance_date": attendance_date
         })
 
@@ -54,7 +66,7 @@ def createAttendanceAndCheckins(data):
             created_attendance = attendance_doc.name
             attendance = created_attendance
 
-        # Employee Checkin creation
+        # 6. Build the Employee Checkin record:
         checkin_data = {
             "doctype": "Employee Checkin",
             "employee": employee.name,
@@ -70,11 +82,12 @@ def createAttendanceAndCheckins(data):
         checkin_doc = frappe.get_doc(checkin_data)
         checkin_doc.insert()
 
-        # Update out_time if exit event
+        # 7. If this is an “OUT” record, update the existing Attendance’s out_time:
         if entry_type == "OUT" and attendance:
             frappe.db.set_value("Attendance", attendance, "out_time", formatted_time)
 
         return {"success": True, "attendance": attendance}
+
     except Exception as e:
         frappe.log_error(_("Attendance Sync Error"), e)
         return {"error": str(e)}
