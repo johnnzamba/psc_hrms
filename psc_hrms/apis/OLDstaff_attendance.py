@@ -56,7 +56,7 @@ def createAttendanceAndCheckins(data):
                 "employee": employee.name,
                 "employee_name": employee.employee_name,
                 "attendance_date": attendance_date,
-                "custom_time_in": formatted_time,
+                "in_time": formatted_time,
                 "company": employee.company,
                 "department": employee.department,
                 "status": "Present"
@@ -84,7 +84,7 @@ def createAttendanceAndCheckins(data):
 
         # 7. If this is an “OUT” record, update the existing Attendance’s out_time:
         if entry_type == "OUT" and attendance:
-            frappe.db.set_value("Attendance", attendance, "custom_time_out", formatted_time)
+            frappe.db.set_value("Attendance", attendance, "out_time", formatted_time)
 
         return {"success": True, "attendance": attendance}
 
