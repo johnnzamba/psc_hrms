@@ -252,3 +252,64 @@ def dispatch_notices(doc=None, method=None, doc_name=None):
             message=f"Failed to send dispatch notice to {recipient} for {doc.name}: {e}",
             title="Dispatch Notices"
         )
+import json
+import frappe
+import datetime
+from datetime import date
+
+@frappe.whitelist()
+def get_leave_approver(employee):
+    """
+    Returns the appropriate leave approver for the given employee.
+    """
+    # Try direct leave_approver on Employee
+    leave_approver, department = frappe.db.get_value(
+        "Employee", employee,
+        ["leave_approver", "department"]
+    )
+
+    # If not set, fallback to first Department Approver
+    if not leave_approver and department:
+        leave_approver = frappe.db.get_value(
+            "Department Approver",
+            {"parent": department, "parentfield": "leave_approvers", "idx": 1},
+            "approver"
+        )
+
+    return leave_approver
+
+
+@frappe.whitelist()
+def create_leave_applications(employee, applications):
+    """
+    Creates Leave Application docs for the given employee and list of applications.
+    Automatically sets leave_approver via get_leave_approver().
+    """
+    created = []
+
+    # Determine the approver and their name once
+    approver = get_leave_approver(employee)
+    approver_name = None
+    if approver:
+        approver_name = frappe.db.get_value("Employee", approver, "employee_name")
+
+    for app in json.loads(applications):
+        employee_doc = frappe.get_doc("Employee", employee)
+
+        la = frappe.new_doc("Leave Application")
+        la.update({
+            "employee": employee,
+            "employee_name": employee_doc.employee_name,
+            "leave_type": app["leave_type"],
+            "from_date": app["from_date"],
+            "to_date": app["to_date"],
+            "company": employee_doc.company,
+            "department": employee_doc.department,
+            "leave_approver": approver,
+            "leave_approver_name": approver_name,
+            "posting_date": date.today()
+        })
+        la.insert()
+        created.append(la.name)
+
+    return created

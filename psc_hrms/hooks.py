@@ -8,7 +8,7 @@ app_license = "mit"
 # Apps
 # ------------------
 after_install = "psc_hrms.apis.helpers.after_install" #Disabled for Automated Allocation
-
+after_migrate = "psc_hrms.apis.minefields.create_or_update_half_day_status"
 
 # Scheduled Tasks
 # ---------------
@@ -30,7 +30,7 @@ fixtures = [
     },
     {
         "doctype": "Client Script",
-        "filters": [["name", "in", ["Set Effective Dates", "Leave Allocation Inner Button", "Leave Allocation for Staff", "Filter By dept"]]]
+        "filters": [["name", "in", ["Set Effective Dates", "Leave Allocation Inner Button", "Leave Allocation for Staff", "Filter By dept", "Leave Application by 3rd Party"]]]
     },
     {
         "doctype": "Workflow",

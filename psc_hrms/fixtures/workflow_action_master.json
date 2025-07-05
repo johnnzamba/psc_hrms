@@ -2,6 +2,55 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2025-03-14 12:09:09.737406",
+  "name": "Submit for Approval",
+  "workflow_action_name": "Submit for Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-14 12:09:42.517149",
+  "name": "Blacklist",
+  "workflow_action_name": "Blacklist"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-14 12:09:56.598166",
+  "name": "Assessment Ongoing",
+  "workflow_action_name": "Assessment Ongoing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-17 12:28:11.970973",
+  "name": "Pending review",
+  "workflow_action_name": "Pending review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-17 12:28:37.727930",
+  "name": "Pending approval",
+  "workflow_action_name": "Pending approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-17 12:46:19.889290",
+  "name": "Draft",
+  "workflow_action_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-17 13:11:20.774771",
+  "name": "Approving",
+  "workflow_action_name": "Approving"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
   "modified": "2024-03-29 16:28:10.811083",
   "name": "Review",
   "workflow_action_name": "Review"
@@ -65,20 +114,6 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2025-05-13 19:43:48.537562",
-  "name": "Make Final Approval",
-  "workflow_action_name": "Make Final Approval"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow Action Master",
-  "modified": "2025-05-13 19:44:14.875125",
-  "name": "Disapprove",
-  "workflow_action_name": "Disapprove"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow Action Master",
   "modified": "2025-05-29 12:12:52.886330",
   "name": "Submit to Supervisor",
   "workflow_action_name": "Submit to Supervisor"
@@ -121,23 +156,9 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2024-03-29 16:28:10.809989",
-  "name": "Reject",
-  "workflow_action_name": "Reject"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow Action Master",
   "modified": "2024-12-18 19:35:30.329026",
   "name": "Submit For Review",
   "workflow_action_name": "Submit For Review"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow Action Master",
-  "modified": "2024-03-29 16:28:10.808386",
-  "name": "Approve",
-  "workflow_action_name": "Approve"
  },
  {
   "docstatus": 0,
@@ -149,8 +170,36 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2024-07-31 10:00:50.462629",
-  "name": "Submit for Approval",
-  "workflow_action_name": "Submit for Approval"
+  "modified": "2024-03-29 16:28:10.808386",
+  "name": "Approve",
+  "workflow_action_name": "Approve"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-05-13 19:43:48.537562",
+  "name": "Make Final Approval",
+  "workflow_action_name": "Make Final Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-05-13 19:44:14.875125",
+  "name": "Disapprove",
+  "workflow_action_name": "Disapprove"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-07-01 20:36:05.296399",
+  "name": "Make Initial Approval",
+  "workflow_action_name": "Make Initial Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-03-29 16:28:10.809989",
+  "name": "Reject",
+  "workflow_action_name": "Reject"
  }
 ]

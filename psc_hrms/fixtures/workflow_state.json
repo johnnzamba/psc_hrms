@@ -3,6 +3,33 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2025-03-14 12:04:07.821309",
+  "name": "Approval Denied",
+  "style": "Danger",
+  "workflow_state_name": "Approval Denied"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-03-14 12:06:38.814145",
+  "name": "Assessment Ongoing",
+  "style": "Info",
+  "workflow_state_name": "Assessment Ongoing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-03-14 12:08:08.922031",
+  "name": "Blacklisted",
+  "style": "Warning",
+  "workflow_state_name": "Blacklisted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2024-03-29 19:14:57.756271",
   "name": "Submitted",
   "style": "",
@@ -246,15 +273,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2024-12-19 06:49:55.319469",
-  "name": "Draft",
-  "style": "Warning",
-  "workflow_state_name": "Draft"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2025-05-24 14:40:26.700202",
   "name": "Pending Approval by HOD",
   "style": "Info",
@@ -277,5 +295,77 @@
   "name": "Pending Approval by Supervisor",
   "style": "Info",
   "workflow_state_name": "Pending Approval by Supervisor"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-03 10:37:10.329286",
+  "name": "Approved by Manager",
+  "style": "Success",
+  "workflow_state_name": "Approved by Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-03 10:37:48.930971",
+  "name": "Rejected by Manager",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-12-19 06:49:55.319469",
+  "name": "Draft",
+  "style": "Warning",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-01 20:34:34.419133",
+  "name": "Initial Review Failed",
+  "style": "Danger",
+  "workflow_state_name": "Initial Review Failed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-01 20:35:18.695603",
+  "name": "Claim Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Claim Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-01 20:34:04.707238",
+  "name": "Claim Approved",
+  "style": "Success",
+  "workflow_state_name": "Claim Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-01 20:28:20.267554",
+  "name": "Pending Review by Claims Manager",
+  "style": "Danger",
+  "workflow_state_name": "Pending Review by Claims Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-01 20:32:40.174625",
+  "name": "Initial Review Passed",
+  "style": "Success",
+  "workflow_state_name": "Initial Review Passed"
  }
 ]
