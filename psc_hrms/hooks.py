@@ -51,8 +51,7 @@ fixtures = [
 
 doc_events = {
 	"Leave Application": {
-		"on_change": "psc_hrms.apis.helpers.dispatch_mails",
-        "on_submit": [
+        "on_update": [
             "psc_hrms.apis.helpers.dispatch_mails",
             "psc_hrms.apis.helpers.dispatch_notices"
         ]

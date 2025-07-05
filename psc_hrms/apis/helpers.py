@@ -43,19 +43,18 @@ def send_employee_notification(doc):
     else:
         frappe.log_error(f"Employee {employee.name} has no email addresses set")
 
-def dispatch_mails(doc=None, method=None, doc_name=None):
+def dispatch_mails(doc, method, doc_name=None):
     """
     Send contextual emails on Leave Application workflow transitions and handle status updates.
     Supports manual testing by passing `doc_name`.
     """
-    frappe.logger().info(f"dispatch_mails called for doc: {doc.name}, workflow_state: {doc.workflow_state}")
     # If called with a doc_name (for testing), load that doc
     if doc_name:
         doc = frappe.get_doc("Leave Application", doc_name)
 
     # Define the template mapping for pending approval states
     template_map = {
-        # "Pending Approval by Supervisor": "Leave Approval Template",
+        "Pending Approval by Supervisor": "Leave Approval Template",
         "Pending Approval by HOD": "Leave Approval Template",
         "Pending Approval by HRM": "Leave Approval Template",
     }
@@ -72,7 +71,7 @@ def dispatch_mails(doc=None, method=None, doc_name=None):
         recipients = []
         if doc.workflow_state == "Pending Approval by Supervisor":
             emp = frappe.get_doc("Employee", doc.employee)
-            if not emp.reports_to:
+            if not emp.leave_approver:
                 frappe.log_error(f"Employee {emp.name} has no reports_to set")
                 return
             sup = frappe.get_doc("Employee", emp.reports_to)
@@ -194,7 +193,7 @@ def user_can_allocate_leave():
 import frappe
 
 @frappe.whitelist()
-def dispatch_notices(doc=None, method=None, doc_name=None):
+def dispatch_notices(doc, method, doc_name=None):
     """
     On submit of Leave Application, notify the stand-in employee via
     the 'Informative Notice for Leave' Email Template.
@@ -206,9 +205,12 @@ def dispatch_notices(doc=None, method=None, doc_name=None):
         doc = frappe.get_doc("Leave Application", doc_name)
 
     # 1) Grab the stand-in Employee link
-    stand_in = doc.custom_who_is_to_stand_in_place_while_absent
-    if not stand_in:
-        frappe.logger().debug(f"No stand-in defined for {doc.name}")
+    if doc.workflow_state == "Pending Approval by HOD":
+        stand_in = doc.custom_who_is_to_stand_in_place_while_absent
+        if not stand_in:
+            frappe.logger().debug(f"No stand-in defined for {doc.name}")
+            return
+    if not doc.workflow_state == "Pending Approval by HOD":
         return
 
     # 2) Fetch Employee record for email
