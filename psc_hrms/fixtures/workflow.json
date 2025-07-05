@@ -4,26 +4,11 @@
   "doctype": "Workflow",
   "document_type": "Leave Application",
   "is_active": 1,
-  "modified": "2025-05-24 19:28:45.254153",
+  "modified": "2025-07-04 09:22:51.532508",
   "name": "Leave Application",
   "override_status": 0,
   "send_email_alert": 0,
   "states": [
-   {
-    "allow_edit": "Employee Self Service",
-    "avoid_status_override": 0,
-    "doc_status": "0",
-    "is_optional_state": 0,
-    "message": null,
-    "next_action_email_template": null,
-    "parent": "Leave Application",
-    "parentfield": "states",
-    "parenttype": "Workflow",
-    "state": "Draft",
-    "update_field": null,
-    "update_value": null,
-    "workflow_builder_id": null
-   },
    {
     "allow_edit": "Leave Approver",
     "avoid_status_override": 0,
@@ -146,18 +131,6 @@
    }
   ],
   "transitions": [
-   {
-    "action": "Submit For Review",
-    "allow_self_approval": 1,
-    "allowed": "Employee Self Service",
-    "condition": null,
-    "next_state": "Pending Approval by Supervisor",
-    "parent": "Leave Application",
-    "parentfield": "transitions",
-    "parenttype": "Workflow",
-    "state": "Draft",
-    "workflow_builder_id": null
-   },
    {
     "action": "Approve",
     "allow_self_approval": 1,

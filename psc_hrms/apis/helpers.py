@@ -55,7 +55,7 @@ def dispatch_mails(doc=None, method=None, doc_name=None):
 
     # Define the template mapping for pending approval states
     template_map = {
-        "Pending Approval by Supervisor": "Leave Approval Template",
+        # "Pending Approval by Supervisor": "Leave Approval Template",
         "Pending Approval by HOD": "Leave Approval Template",
         "Pending Approval by HRM": "Leave Approval Template",
     }

@@ -1,3 +1,4 @@
+
 import frappe
 from frappe import _
 from datetime import datetime
@@ -76,9 +77,7 @@ def createAttendanceAndCheckins(data):
             "device_id": data.get("master_controller_id"),
             "custom_checkin_synced": 1
         }
-        if created_attendance and entry_type == "IN":
-            checkin_data["attendance"] = created_attendance
-
+        
         checkin_doc = frappe.get_doc(checkin_data)
         checkin_doc.insert()
 

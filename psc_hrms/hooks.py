@@ -14,29 +14,14 @@ after_install = "psc_hrms.apis.helpers.after_install" #Disabled for Automated Al
 # ---------------
 
 scheduler_events = {
-	"daily": [
-		"psc_hrms.apis.cron_jobs.set_leave_days"
-	],
+	# "daily": [
+	#	"psc_hrms.apis.cron_jobs.set_leave_days"
+	# ],
     # "daily": [
     #     "psc_hrms.apis.cron_jobs.expire_leave_allocation"
     # ]
 }
 fixtures = [
-    {
-        "doctype": "DocType",
-        "filters": [
-            [
-                "name", "in", [
-                    "Leave Policy Assignment",
-                    "Leave Policy Detail",
-                    "Leave Policy",
-                    "Leave Allocation",
-                    "Leave Application",
-                    "Attendance"
-                ]
-            ]
-        ]
-    },
     {
         "doctype": "Workflow State"
     },

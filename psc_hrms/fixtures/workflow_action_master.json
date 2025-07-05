@@ -145,5 +145,12 @@
   "modified": "2024-12-18 19:41:19.510334",
   "name": "Cancel",
   "workflow_action_name": "Cancel"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2024-07-31 10:00:50.462629",
+  "name": "Submit for Approval",
+  "workflow_action_name": "Submit for Approval"
  }
 ]
