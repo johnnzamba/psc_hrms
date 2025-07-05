@@ -90,3 +90,99 @@ def set_leave_days():
                 alloc_doc.insert(ignore_permissions=True)
                 alloc_doc.submit()
 
+import frappe
+
+
+def set_user_permissions():
+    """
+    Cron job to sync User Permissions for Employees:
+      1. For each distinct leave_approver on Employee, grant permission on Employee to that approver.
+      2. For each Employee by department, fetch Department Approver entries and grant permission on Employee to each.
+    Avoids duplicates by checking existing User Permission docs.
+    """
+    # Part 1: Permissions for direct leave_approver (non-empty)
+    employees = frappe.get_all(
+        "Employee",
+        fields=["name", "leave_approver"],
+        filters={"leave_approver": ["!=", ""]}
+    )
+
+    # Group by leave_approver
+    approver_map = {}
+    for emp in employees:
+        approver = emp.leave_approver
+        approver_map.setdefault(approver, []).append(emp.name)
+
+    for approver, emp_list in approver_map.items():
+        for emp_name in emp_list:
+            _create_permission(
+                user=approver,
+                allow="Employee",
+                for_value=emp_name,
+                apply_to_all_doctypes=1
+            )
+
+    # Part 2: Permissions for department-level approvers
+    # Fetch distinct non-empty departments
+    departments = frappe.get_all(
+        "Employee",
+        filters={"department": ["!=", ""]},
+        fields=["department"],
+        distinct=True
+    )
+
+    for d in departments:
+        dept = d.department
+        # Get approvers from Department Approver child table
+        approver_rows = frappe.get_all(
+            "Department Approver",
+            fields=["approver"],
+            filters={
+                "parent": dept,
+                "parentfield": "leave_approvers"
+            }
+        )
+        approvers = {row.approver for row in approver_rows if row.approver}
+
+        # For each employee in this department
+        emp_in_dept = frappe.get_all(
+            "Employee",
+            filters={"department": dept},
+            fields=["name"]
+        )
+        for approver in approvers:
+            for emp in emp_in_dept:
+                _create_permission(
+                    user=approver,
+                    allow="Employee",
+                    for_value=emp.name,
+                    apply_to_all_doctypes=1
+                )
+
+
+def _create_permission(user, allow, for_value, apply_to_all_doctypes=0):
+    """
+    Helper to create a User Permission if it does not already exist.
+    """
+    if not user or not for_value:
+        return
+
+    exists = frappe.db.exists(
+        "User Permission",
+        {
+            "user": user,
+            "allow": allow,
+            "for_value": for_value,
+            "apply_to_all_doctypes": apply_to_all_doctypes
+        }
+    )
+    if not exists:
+        perm = frappe.get_doc({
+            "doctype": "User Permission",
+            "user": user,
+            "allow": allow,
+            "for_value": for_value,
+            "apply_to_all_doctypes": apply_to_all_doctypes
+        })
+        perm.insert(ignore_permissions=True)
+        frappe.db.commit()
