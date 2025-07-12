@@ -17,8 +17,8 @@ after_migrate = [
 # ---------------
 
 scheduler_events = {
-    "*/5 * * * *":{
-        "psc_hrms.apis.cron_jobs.set_user_permissions"
+    "cron": {
+    "*/5 * * * *": "psc_hrms.apis.cron_jobs.set_user_permissions"
     }
 	# "daily": [
 	#	"psc_hrms.apis.cron_jobs.set_leave_days"

@@ -92,14 +92,40 @@ def set_leave_days():
 
 import frappe
 
-
 def set_user_permissions():
     """
     Cron job to sync User Permissions for Employees:
+      0. For each Employee, create default permission for their own Employee record
       1. For each distinct leave_approver on Employee, grant permission on Employee to that approver.
       2. For each Employee by department, fetch Department Approver entries and grant permission on Employee to each.
     Avoids duplicates by checking existing User Permission docs.
     """
+    # Part 0: Create default Employee permissions for all Employees
+    employees = frappe.get_all(
+        "Employee",
+        fields=["name", "user_id", "company"],
+        filters={"user_id": ["!=", ""]}
+    )
+    
+    for emp in employees:
+        # Create Employee permission
+        _create_permission(
+            user=emp.user_id,
+            allow="Employee",
+            for_value=emp.name,
+            apply_to_all_doctypes=1,
+            is_default=1
+        )
+        
+        # Create Company permission if company exists
+        if emp.company:
+            _create_permission(
+                user=emp.user_id,
+                allow="Company",
+                for_value=emp.company,
+                apply_to_all_doctypes=1
+            )
+
     # Part 1: Permissions for direct leave_approver (non-empty)
     employees = frappe.get_all(
         "Employee",
@@ -117,7 +143,7 @@ def set_user_permissions():
         for emp_name in emp_list:
             _create_permission(
                 user=approver,
-                allow="Employee",
+                allow="Leave Application",
                 for_value=emp_name,
                 apply_to_all_doctypes=1
             )
@@ -159,30 +185,42 @@ def set_user_permissions():
                     apply_to_all_doctypes=1
                 )
 
-
-def _create_permission(user, allow, for_value, apply_to_all_doctypes=0):
+def _create_permission(user, allow, for_value, apply_to_all_doctypes=0, is_default=0):
     """
     Helper to create a User Permission if it does not already exist.
     """
     if not user or not for_value:
         return
 
-    exists = frappe.db.exists(
-        "User Permission",
-        {
+    try:
+        # Build existence check filters
+        filters = {
             "user": user,
             "allow": allow,
             "for_value": for_value,
             "apply_to_all_doctypes": apply_to_all_doctypes
         }
-    )
-    if not exists:
-        perm = frappe.get_doc({
-            "doctype": "User Permission",
-            "user": user,
-            "allow": allow,
-            "for_value": for_value,
-            "apply_to_all_doctypes": apply_to_all_doctypes
-        })
-        perm.insert(ignore_permissions=True)
-        frappe.db.commit()
+        
+        # Only include is_default in check if it's set to 1
+        if is_default:
+            filters["is_default"] = 1
+
+        exists = frappe.db.exists("User Permission", filters)
+        
+        if not exists:
+            perm = frappe.get_doc({
+                "doctype": "User Permission",
+                "user": user,
+                "allow": allow,
+                "for_value": for_value,
+                "apply_to_all_doctypes": apply_to_all_doctypes,
+                "is_default": is_default
+            })
+            perm.insert(ignore_permissions=True)
+            frappe.db.commit()
+    except frappe.DuplicateEntryError:
+        # Permission already exists, ignore and continue
+        frappe.db.rollback()
+    except Exception as e:
+        frappe.log_error(f"Error creating User Permission: {e}")
+        frappe.db.rollback()
