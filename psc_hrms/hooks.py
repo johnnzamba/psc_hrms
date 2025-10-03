@@ -8,11 +8,11 @@ app_license = "mit"
 # Apps
 # ------------------
 after_install = "psc_hrms.apis.helpers.after_install" #Disabled for Automated Allocation
-after_migrate = [ 
-    "psc_hrms.apis.minefields.create_or_update_half_day_status",
-    "psc_hrms.apis.minefields.create_or_update_bcc"
-    # "psc_hrms.apis.cron_jobs.set_user_permissions"
-]
+# after_migrate = [ 
+#     "psc_hrms.apis.minefields.create_or_update_half_day_status",
+#     "psc_hrms.apis.minefields.create_or_update_bcc"
+#     # "psc_hrms.apis.cron_jobs.set_user_permissions"
+# ]
 
 # Scheduled Tasks
 # ---------------
