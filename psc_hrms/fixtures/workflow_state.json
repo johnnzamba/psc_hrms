@@ -3,6 +3,834 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2025-06-04 18:25:38.250253",
+  "name": "Redo by Head of Section",
+  "style": "",
+  "workflow_state_name": "Redo by Head of Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-04 18:30:33.629820",
+  "name": "Redo of Head of Section",
+  "style": "",
+  "workflow_state_name": "Redo of Head of Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-13 09:45:47.445981",
+  "name": "Claimable",
+  "style": "",
+  "workflow_state_name": "Claimable"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-13 09:47:05.334124",
+  "name": "Not claimable",
+  "style": "",
+  "workflow_state_name": "Not claimable"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-13 09:51:14.979187",
+  "name": "Reviewed",
+  "style": "",
+  "workflow_state_name": "Reviewed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.700635",
+  "name": "Approved by Finance",
+  "style": "Success",
+  "workflow_state_name": "Approved by Finance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.675263",
+  "name": "NOT APPROVED by Finance",
+  "style": "Success",
+  "workflow_state_name": "NOT APPROVED by Finance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-06 19:51:22.989689",
+  "name": "Pending Membership Committee Review",
+  "style": "Inverse",
+  "workflow_state_name": "Pending Membership Committee Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.657244",
+  "name": "Approved by Committee",
+  "style": "Success",
+  "workflow_state_name": "Approved by Committee"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.635165",
+  "name": "Approved by Board",
+  "style": "Success",
+  "workflow_state_name": "Approved by Board"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.610681",
+  "name": "Approved by Seconder",
+  "style": "Success",
+  "workflow_state_name": "Approved by Seconder"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 02:20:30.647391",
+  "name": "Under Administrative Review",
+  "style": "Info",
+  "workflow_state_name": "Under Administrative Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 02:22:48.894200",
+  "name": "Initial Approval Passed",
+  "style": "Success",
+  "workflow_state_name": "Initial Approval Passed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.363544",
+  "name": "Proposal Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Proposal Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 03:05:34.026120",
+  "name": "Recommended for Balloting",
+  "style": "Success",
+  "workflow_state_name": "Recommended for Balloting"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.338481",
+  "name": "Rejected by Committee",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by Committee"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 03:08:25.890223",
+  "name": "Provisionally Accepted",
+  "style": "Success",
+  "workflow_state_name": "Provisionally Accepted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 03:16:36.825605",
+  "name": "Balloting in Progress",
+  "style": "Info",
+  "workflow_state_name": "Balloting in Progress"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 03:52:54.893228",
+  "name": "First Round Failed",
+  "style": "Danger",
+  "workflow_state_name": "First Round Failed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 03:54:49.456952",
+  "name": "Second Round Failed",
+  "style": "Danger",
+  "workflow_state_name": "Second Round Failed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.392170",
+  "name": "Application Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Application Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-06 19:54:57.677775",
+  "name": "Pending Final Approval by Board",
+  "style": "Inverse",
+  "workflow_state_name": "Pending Final Approval by Board"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 03:04:39.029013",
+  "name": "Under Balloting Committee Review",
+  "style": "Primary",
+  "workflow_state_name": "Under Balloting Committee Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 03:07:52.197116",
+  "name": "Fees Pending",
+  "style": "Danger",
+  "workflow_state_name": "Fees Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-12 14:18:39.347192",
+  "name": "Balloting Scheduled",
+  "style": "Primary",
+  "workflow_state_name": "Balloting Scheduled"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.584976",
+  "name": "Approved by Operations Manager",
+  "style": "Success",
+  "workflow_state_name": "Approved by Operations Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.309080",
+  "name": "Rejected by Operations Manager",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by Operations Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 02:16:24.652007",
+  "name": "Pending Review by Seconder",
+  "style": "Warning",
+  "workflow_state_name": "Pending Review by Seconder"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 03:51:59.030467",
+  "name": "First Round Success",
+  "style": "Success",
+  "workflow_state_name": "First Round Success"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-11 03:54:17.414733",
+  "name": "Second Round Success",
+  "style": "Success",
+  "workflow_state_name": "Second Round Success"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-14 13:18:49.762158",
+  "name": "Submit",
+  "style": "",
+  "workflow_state_name": "Submit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-14 13:25:26.898231",
+  "name": "Check",
+  "style": "",
+  "workflow_state_name": "Check"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.169190",
+  "name": "Pending by supervising engineer",
+  "style": "Warning",
+  "workflow_state_name": "Pending by supervising engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-02-21 13:45:23.492755",
+  "name": "Reveiw by Acc Payable",
+  "style": "",
+  "workflow_state_name": "Reveiw by Acc Payable"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.765649",
+  "name": "Approved by Pm",
+  "style": "Success",
+  "workflow_state_name": "Approved by Pm"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.760860",
+  "name": "Rejected by PM",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by PM"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.151900",
+  "name": "Pending Approval by Pm",
+  "style": "Warning",
+  "workflow_state_name": "Pending Approval by Pm"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-03-05 11:22:20.923242",
+  "name": "Reject by Supervising Engineer",
+  "style": "",
+  "workflow_state_name": "Reject by Supervising Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-03-10 13:22:50.913075",
+  "name": "Received at purchasing section",
+  "style": "",
+  "workflow_state_name": "Received at purchasing section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-03-05 11:19:54.037891",
+  "name": "Reject by Plant Manager",
+  "style": "",
+  "workflow_state_name": "Reject by Plant Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-03-05 11:21:18.083301",
+  "name": "Reject by C.D",
+  "style": "",
+  "workflow_state_name": "Reject by C.D"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-03-05 11:22:57.931654",
+  "name": "Reject by S.E",
+  "style": "",
+  "workflow_state_name": "Reject by S.E"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-02-21 13:59:17.604086",
+  "name": "Reject by Acc payable",
+  "style": "",
+  "workflow_state_name": "Reject by Acc payable"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-02-21 14:07:40.198997",
+  "name": "Reject by PM",
+  "style": "",
+  "workflow_state_name": "Reject by PM"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-02-21 14:03:30.491047",
+  "name": "Payment Processing",
+  "style": "",
+  "workflow_state_name": "Payment Processing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:47:14.649199",
+  "name": "Approval by Pm",
+  "style": "Success",
+  "workflow_state_name": "Approval by Pm"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-03-05 11:24:32.748777",
+  "name": "Received @ purchasing section",
+  "style": "",
+  "workflow_state_name": "Received @ purchasing section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:47:14.681707",
+  "name": "Approval by Acc payable",
+  "style": "Success",
+  "workflow_state_name": "Approval by Acc payable"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.246642",
+  "name": "Pending review by S.E",
+  "style": "Warning",
+  "workflow_state_name": "Pending review by S.E"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.227904",
+  "name": "Pending review by C.D",
+  "style": "Warning",
+  "workflow_state_name": "Pending review by C.D"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.258255",
+  "name": "Pending review by PM",
+  "style": "Warning",
+  "workflow_state_name": "Pending review by PM"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.269054",
+  "name": "Pending Review by Acc payable",
+  "style": "Warning",
+  "workflow_state_name": "Pending Review by Acc payable"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-02-21 07:13:50.351919",
+  "name": "Rework",
+  "style": "",
+  "workflow_state_name": "Rework"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-02-21 07:06:24.926316",
+  "name": "Under review",
+  "style": "",
+  "workflow_state_name": "Under review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-04 10:24:16.922302",
+  "name": "Review by HSEQ",
+  "style": "",
+  "workflow_state_name": "Review by HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-04 10:24:53.032861",
+  "name": "Review by Head of Section",
+  "style": "",
+  "workflow_state_name": "Review by Head of Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-04 10:25:17.100830",
+  "name": "Review by Procurement manager",
+  "style": "",
+  "workflow_state_name": "Review by Procurement manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-04 12:03:35.609526",
+  "name": "Redo by HSEQ",
+  "style": "",
+  "workflow_state_name": "Redo by HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-14 14:28:48.079540",
+  "name": "Review by Supervising Engineer",
+  "style": "",
+  "workflow_state_name": "Review by Supervising Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-14 13:33:23.172638",
+  "name": "Validation by Procurement Manager",
+  "style": "",
+  "workflow_state_name": "Validation by Procurement Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.199410",
+  "name": "Pending review by Contractor Director",
+  "style": "Warning",
+  "workflow_state_name": "Pending review by Contractor Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-03-05 11:16:05.171219",
+  "name": "Validation by head of section",
+  "style": "",
+  "workflow_state_name": "Validation by head of section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-14 14:50:36.336061",
+  "name": "Review by  HSEQ",
+  "style": "",
+  "workflow_state_name": "Review by  HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-14 13:15:57.084325",
+  "name": "Redo",
+  "style": "",
+  "workflow_state_name": "Redo"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-14 13:20:11.389734",
+  "name": "Review",
+  "style": "",
+  "workflow_state_name": "Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:46:44.486664",
+  "name": "Received by Procurement Manager",
+  "style": "Primary",
+  "workflow_state_name": "Received by Procurement Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:46:44.541352",
+  "name": "Received by Supervising Engineer",
+  "style": "Primary",
+  "workflow_state_name": "Received by Supervising Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.804201",
+  "name": "Approved by HSEQ",
+  "style": "Success",
+  "workflow_state_name": "Approved by HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.823189",
+  "name": "Approved by Head of section",
+  "style": "Success",
+  "workflow_state_name": "Approved by Head of section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:46:44.520426",
+  "name": "Received by head of section",
+  "style": "Primary",
+  "workflow_state_name": "Received by head of section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:46:44.530948",
+  "name": "Received by  HSEQ",
+  "style": "Primary",
+  "workflow_state_name": "Received by  HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.784150",
+  "name": "Approved by Supervising Engineer",
+  "style": "Success",
+  "workflow_state_name": "Approved by Supervising Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-19 11:11:06.722943",
+  "name": "Claim Form Dispatched",
+  "style": "Success",
+  "workflow_state_name": "Claim Form Dispatched"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.228672",
+  "name": "Rejected by Plant Manager",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by Plant Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.180313",
+  "name": "Rejected by Contractor Director",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by Contractor Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 08:12:10.183211",
+  "name": "Pending Final Approval by Contractor Director",
+  "style": "Warning",
+  "workflow_state_name": "Pending Final Approval by Contractor Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-19 11:13:25.727154",
+  "name": "Revoked by Incident Manager",
+  "style": "Warning",
+  "workflow_state_name": "Revoked by Incident Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-21 18:17:34.742900",
+  "name": "Pending Review by Incident Manager",
+  "style": "Danger",
+  "workflow_state_name": "Pending Review by Incident Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.617108",
+  "name": "Rejected by HSEQ",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.493353",
+  "name": "Rejected by Head of section",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by Head of section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.140169",
+  "name": "Rejected by Purchase User",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by Purchase User"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-23 19:21:23.638959",
+  "name": "Pending Review by Head of Department",
+  "style": "Warning",
+  "workflow_state_name": "Pending Review by Head of Department"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.237140",
+  "name": "Pending review by Plant Manager",
+  "style": "Warning",
+  "workflow_state_name": "Pending review by Plant Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.697204",
+  "name": "Rejected by Supervising Engineer",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by Supervising Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-23 19:20:02.421709",
+  "name": "Pending Review by HSEQ",
+  "style": "Warning",
+  "workflow_state_name": "Pending Review by HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.218275",
+  "name": "pending validation by head of section",
+  "style": "Warning",
+  "workflow_state_name": "pending validation by head of section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.189556",
+  "name": "Pending Receipt at Purchase Section",
+  "style": "Warning",
+  "workflow_state_name": "Pending Receipt at Purchase Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-19 20:23:52.993845",
+  "name": "Broker Response Accepted",
+  "style": "Info",
+  "workflow_state_name": "Broker Response Accepted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-19 11:08:25.851948",
+  "name": "Reviewed by Incident Manager",
+  "style": "Success",
+  "workflow_state_name": "Reviewed by Incident Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-28 09:48:19.208818",
+  "name": "Pending Review by Supervising Engineer",
+  "style": "Warning",
+  "workflow_state_name": "Pending Review by Supervising Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-28 21:38:40.231554",
+  "name": "insurer Feedback is Pending",
+  "style": "Info",
+  "workflow_state_name": "insurer Feedback is Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-11 20:19:19.485186",
+  "name": "Broker Feedback Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Broker Feedback Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2025-03-14 12:04:07.821309",
   "name": "Approval Denied",
   "style": "Danger",
@@ -367,5 +1195,113 @@
   "name": "Pending Approval by Supervisor",
   "style": "Info",
   "workflow_state_name": "Pending Approval by Supervisor"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-22 20:07:29.275886",
+  "name": "Claimant Feedback Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Claimant Feedback Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-08-11 20:23:46.804307",
+  "name": "Claim Closed",
+  "style": "Success",
+  "workflow_state_name": "Claim Closed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-24 15:32:58.527561",
+  "name": "Claimant Feedback Approved",
+  "style": "Success",
+  "workflow_state_name": "Claimant Feedback Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-19 20:22:08.015194",
+  "name": "Broker Response Pending",
+  "style": "Warning",
+  "workflow_state_name": "Broker Response Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-19 20:24:48.155018",
+  "name": "Claim Revoked",
+  "style": "Danger",
+  "workflow_state_name": "Claim Revoked"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-06 19:42:12.769315",
+  "name": "Pending Review",
+  "style": "Warning",
+  "workflow_state_name": "Pending Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-07-28 21:39:30.839712",
+  "name": "insurer Feedback Received",
+  "style": "Success",
+  "workflow_state_name": "insurer Feedback Received"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-06-19 20:19:22.322105",
+  "name": "Pending Response from Claimant",
+  "style": "Danger",
+  "workflow_state_name": "Pending Response from Claimant"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-12 08:28:36.671854",
+  "name": "Issue Not Resolved",
+  "style": "Primary",
+  "workflow_state_name": "Issue Not Resolved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-12 08:26:36.735267",
+  "name": "Case on Hold",
+  "style": "Inverse",
+  "workflow_state_name": "Case on Hold"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-12 08:25:24.629872",
+  "name": "Pending Resolution",
+  "style": "Warning",
+  "workflow_state_name": "Pending Resolution"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-09-12 08:28:09.935674",
+  "name": "Issue Resolved",
+  "style": "Success",
+  "workflow_state_name": "Issue Resolved"
  }
 ]

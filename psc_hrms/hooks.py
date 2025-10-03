@@ -56,12 +56,12 @@ fixtures = [
 # Hooks
 
 doc_events = {
-	"Leave Application": {
-        "on_update": [
-            "psc_hrms.apis.helpers.dispatch_mails",
-            "psc_hrms.apis.helpers.dispatch_notices"
-        ]
-	},
+	# "Leave Application": {
+    #     "on_update": [
+    #         "psc_hrms.apis.helpers.dispatch_mails",
+    #         "psc_hrms.apis.helpers.dispatch_notices"
+    #     ]
+	# },
     "Public Holiday and Off Days Claim Form": {
         "on_submit": "psc_hrms.psc_hrms.doctype.public_holiday_and_off_days_claim_form.public_holiday_and_off_days_claim_form.notify_supervisor",
         "on_update_after_submit": "psc_hrms.psc_hrms.doctype.public_holiday_and_off_days_claim_form.public_holiday_and_off_days_claim_form.notify_users"

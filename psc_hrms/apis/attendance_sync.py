@@ -7,13 +7,14 @@ import base64
 # Configuration
 FRAPPE_SITE =  "parklands.techsavanna.technology"
 FRAPPE_API_KEY = "b1d5854640437ae"
-FRAPPE_API_SECRET = "9ad0e32b7482b4d"
+FRAPPE_API_SECRET = "e921c425ab4af71"
 COSEC_IP = "192.168.10.200"
 COSEC_USERNAME = "sa"
 COSEC_PASSWORD = "P@rkland$"
 
 def main():
-    today = datetime.now().strftime("%d%m%Y")
+    # today = datetime.now().strftime("%d%m%Y")
+    today = "15082025"
     date_range = f"{today}-{today}"
     frappe_auth = (FRAPPE_API_KEY, FRAPPE_API_SECRET)
     

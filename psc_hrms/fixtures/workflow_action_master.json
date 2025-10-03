@@ -2,6 +2,503 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
+  "modified": "2025-06-09 14:31:29.447714",
+  "name": "Rework",
+  "workflow_action_name": "Rework"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-13 09:50:33.391797",
+  "name": "Claimable",
+  "workflow_action_name": "Claimable"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-13 09:52:18.484002",
+  "name": "Not claimable",
+  "workflow_action_name": "Not claimable"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-06 19:58:32.460814",
+  "name": "Approve Application",
+  "workflow_action_name": "Approve Application"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-06 19:59:07.628448",
+  "name": "Revoke Application",
+  "workflow_action_name": "Revoke Application"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-06 20:02:08.437913",
+  "name": "Submit to Member Committee",
+  "workflow_action_name": "Submit to Member Committee"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-06 20:02:50.949371",
+  "name": "Approve Applicant",
+  "workflow_action_name": "Approve Applicant"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-06 20:03:29.284026",
+  "name": "Disapprove Applicant",
+  "workflow_action_name": "Disapprove Applicant"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-06 20:04:31.586081",
+  "name": "Submit to Executive Committee",
+  "workflow_action_name": "Submit to Executive Committee"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-06 20:05:52.110486",
+  "name": "Submit to Board",
+  "workflow_action_name": "Submit to Board"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-06 20:06:32.751271",
+  "name": "Reject Application",
+  "workflow_action_name": "Reject Application"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-11 02:29:04.888770",
+  "name": "Second Proposal",
+  "workflow_action_name": "Second Proposal"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-11 02:29:51.842174",
+  "name": "Disapprove Proposal",
+  "workflow_action_name": "Disapprove Proposal"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-11 02:31:23.766608",
+  "name": "Submit for Administrative Review",
+  "workflow_action_name": "Submit for Administrative Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-11 03:09:35.205959",
+  "name": "Approved for Balloting",
+  "workflow_action_name": "Approved for Balloting"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-11 03:11:14.405868",
+  "name": "Recommend",
+  "workflow_action_name": "Recommend"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-11 03:57:55.475681",
+  "name": "Passed",
+  "workflow_action_name": "Passed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-11 03:58:20.859496",
+  "name": "Failed",
+  "workflow_action_name": "Failed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-11 04:01:30.938561",
+  "name": "Passed in Second Round",
+  "workflow_action_name": "Passed in Second Round"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-11 04:01:52.819153",
+  "name": "Failed in Second Round",
+  "workflow_action_name": "Failed in Second Round"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 13:55:22.544043",
+  "name": "Submitting to HSEQ",
+  "workflow_action_name": "Submitting to HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 13:57:29.313910",
+  "name": "Re do evaluation",
+  "workflow_action_name": "Re do evaluation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 13:58:15.697007",
+  "name": "Submitted to HSEQ",
+  "workflow_action_name": "Submitted to HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 13:58:54.962694",
+  "name": "Save",
+  "workflow_action_name": "Save"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 14:02:19.894744",
+  "name": "Submitted to head secton",
+  "workflow_action_name": "Submitted to head secton"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 14:04:30.347304",
+  "name": "submitted to",
+  "workflow_action_name": "submitted to"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 14:05:29.640033",
+  "name": "Submitted to finance",
+  "workflow_action_name": "Submitted to finance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 14:12:24.156064",
+  "name": "verifying",
+  "workflow_action_name": "verifying"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 14:24:48.331290",
+  "name": "verifying by Supervising Engineer",
+  "workflow_action_name": "verifying by Supervising Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 14:44:04.523551",
+  "name": "submit to HSEQ",
+  "workflow_action_name": "submit to HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-14 14:52:46.841202",
+  "name": "Verify by HSEQ",
+  "workflow_action_name": "Verify by HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-02-21 02:18:34.504335",
+  "name": "Invoice creator completes all mandatory fields and clicks “Submit”",
+  "workflow_action_name": "Invoice creator completes all mandatory fields and clicks “Submit”"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-02-21 02:20:00.832314",
+  "name": "System validates the invoice and routes it for review",
+  "workflow_action_name": "System validates the invoice and routes it for review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-02-21 02:54:03.367641",
+  "name": "Supplier revises the invoice based on provided feedback",
+  "workflow_action_name": "Supplier revises the invoice based on provided feedback"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-02-21 02:54:54.144645",
+  "name": "Supplier re-submits the revised invoice",
+  "workflow_action_name": "Supplier re-submits the revised invoice"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-02-21 07:19:52.521670",
+  "name": "Notify Supplier of Cancelation",
+  "workflow_action_name": "Notify Supplier of Cancelation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-02-21 13:53:19.366398",
+  "name": "Submit to Procurement Manager",
+  "workflow_action_name": "Submit to Procurement Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-05 11:26:37.005066",
+  "name": "Submit to S.E",
+  "workflow_action_name": "Submit to S.E"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-05 11:30:18.552288",
+  "name": "Submit for Review by plant manager",
+  "workflow_action_name": "Submit for Review by plant manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-05 11:33:05.362990",
+  "name": "Received by Purchasing",
+  "workflow_action_name": "Received by Purchasing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-02-21 13:48:06.861805",
+  "name": "Submit for Review by Acc payable",
+  "workflow_action_name": "Submit for Review by Acc payable"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-22 18:08:01.863931",
+  "name": "Submit for validation by plant manager",
+  "workflow_action_name": "Submit for validation by plant manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-05-09 15:56:41.791308",
+  "name": "RE-DO",
+  "workflow_action_name": "RE-DO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-03-10 12:56:54.272944",
+  "name": "Submit to Supervising Engineer",
+  "workflow_action_name": "Submit to Supervising Engineer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-22 18:04:26.801272",
+  "name": "Validation by Head of sections",
+  "workflow_action_name": "Validation by Head of sections"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-22 18:08:23.189264",
+  "name": "Submit for validation by procurement manager",
+  "workflow_action_name": "Submit for validation by procurement manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-22 18:09:36.792129",
+  "name": "Submitted",
+  "workflow_action_name": "Submitted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-05-09 16:00:08.947027",
+  "name": "Send Back",
+  "workflow_action_name": "Send Back"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-22 17:54:22.158538",
+  "name": "Approved",
+  "workflow_action_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-22 17:56:13.210575",
+  "name": "Rejected",
+  "workflow_action_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-04-22 17:57:18.603951",
+  "name": "Redo",
+  "workflow_action_name": "Redo"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-19 11:14:35.544747",
+  "name": "Initiate Claim",
+  "workflow_action_name": "Initiate Claim"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 07:54:10.327529",
+  "name": "Decline Request for Approval",
+  "workflow_action_name": "Decline Request for Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 07:56:00.144610",
+  "name": "Reapprove and Route to Plant Manager",
+  "workflow_action_name": "Reapprove and Route to Plant Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 07:58:44.971861",
+  "name": "Validate and Route to Head of Sec.",
+  "workflow_action_name": "Validate and Route to Head of Sec."
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 08:02:35.983143",
+  "name": "Reapprove for Contractor Director",
+  "workflow_action_name": "Reapprove for Contractor Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 08:07:02.896901",
+  "name": "Reapprove & Send to Head of Section",
+  "workflow_action_name": "Reapprove & Send to Head of Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 08:13:14.913469",
+  "name": "Submit for Final Approval",
+  "workflow_action_name": "Submit for Final Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 08:14:39.568706",
+  "name": "Reapprove and Route to Purchase User",
+  "workflow_action_name": "Reapprove and Route to Purchase User"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-23 19:29:59.001080",
+  "name": "Reapprove and Route to HSEQ",
+  "workflow_action_name": "Reapprove and Route to HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-23 19:31:00.791809",
+  "name": "Validate and Route to HOD",
+  "workflow_action_name": "Validate and Route to HOD"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-23 19:33:35.745016",
+  "name": "Reapprove and Route to Head of Section",
+  "workflow_action_name": "Reapprove and Route to Head of Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-08-01 12:33:27.575826",
+  "name": "Review & Approve",
+  "workflow_action_name": "Review & Approve"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 07:48:22.303371",
+  "name": "Approve & Forward to Plant Manager",
+  "workflow_action_name": "Approve & Forward to Plant Manager"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 07:53:24.269335",
+  "name": "Process Approval and Route to Contractor Dir",
+  "workflow_action_name": "Process Approval and Route to Contractor Dir"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-23 19:28:02.666729",
+  "name": "Process Approval and Route to Head of Section",
+  "workflow_action_name": "Process Approval and Route to Head of Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-23 19:36:14.570520",
+  "name": "Reapprove & Send to HOD",
+  "workflow_action_name": "Reapprove & Send to HOD"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-25 14:35:30.788972",
+  "name": "Approve & Forward to HSEQ",
+  "workflow_action_name": "Approve & Forward to HSEQ"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 08:04:37.691180",
+  "name": "Authorize & Send to Purchase",
+  "workflow_action_name": "Authorize & Send to Purchase"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-19 20:31:44.332261",
+  "name": "Approve Claim",
+  "workflow_action_name": "Approve Claim"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-08-11 20:20:53.291736",
+  "name": "Close Claim",
+  "workflow_action_name": "Close Claim"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
   "modified": "2025-03-14 12:09:09.737406",
   "name": "Submit for Approval",
   "workflow_action_name": "Submit for Approval"
@@ -201,5 +698,40 @@
   "modified": "2024-03-29 16:28:10.809989",
   "name": "Reject",
   "workflow_action_name": "Reject"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-19 20:32:11.579213",
+  "name": "Disapprove Claim",
+  "workflow_action_name": "Disapprove Claim"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-19 20:30:45.031065",
+  "name": "Response Satisfactory",
+  "workflow_action_name": "Response Satisfactory"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-09-12 08:29:12.955404",
+  "name": "Place on Hold",
+  "workflow_action_name": "Place on Hold"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-09-12 08:30:19.151490",
+  "name": "Resolved Successfully",
+  "workflow_action_name": "Resolved Successfully"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-09-12 08:31:45.023689",
+  "name": "Unable to Resolve",
+  "workflow_action_name": "Unable to Resolve"
  }
 ]

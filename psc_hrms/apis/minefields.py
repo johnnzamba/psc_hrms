@@ -20,3 +20,23 @@ def create_or_update_half_day_status():
     })
     print("Custom field 'half_day_status' created successfully.")
     frappe.db.commit()
+
+
+def create_or_update_bcc():
+    print("Executing.......")
+
+    # Delete if exists
+    custom_field_name = frappe.db.get_value("Custom Field", {"dt": "Email Account", "fieldname": "always_bcc"})
+    if custom_field_name:
+        frappe.delete_doc("Custom Field", custom_field_name)
+        print("Deleted existing 'always_bcc' custom field.")
+
+    # Create the new field
+    create_custom_field("Email Account", {
+        "fieldname": "always_bcc",
+        "fieldtype": "Data",
+        "label": "Always BCC",
+        "hidden": 1
+    })
+    print("Custom field 'always_bcc' created successfully.")
+    frappe.db.commit()
